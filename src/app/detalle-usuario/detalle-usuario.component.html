@@ -1,0 +1,20 @@
+<div class="container">
+<h2>Detalles de Usuario</h2> 
+
+<hr/>
+<div *ngIf="usuario">
+  <div>
+    <label><b>Nombre: </b></label> {{usuario.nombre}}
+  </div>
+  <div>
+    <label><b>apellido: </b></label> {{usuario.apellido}}
+  </div>
+  <div>
+    <label><b>Email: </b></label> {{usuario.email}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Lista de Usuarios</button><br>
+</div>
