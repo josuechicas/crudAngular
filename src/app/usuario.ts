@@ -1,7 +1,6 @@
 export class Usuario {
     id: number;
     nombre: string;
-    apellido: string;
-    email: string;
-    active: boolean;
+    codigo: string;
+    descripcion: string;
 }
