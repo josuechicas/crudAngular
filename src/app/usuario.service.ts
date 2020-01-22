@@ -2,11 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+import {UsuarioResponse} from "./model/usuario.response";
+
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
   private baseUrl = 'http://52.149.236.51:8080';
+
+  login(loginPayload) : Observable<UsuarioResponse> {
+    return this.http.post<UsuarioResponse>('http://52.149.236.51:8080/' + 'auth', loginPayload);
+  }
 
   constructor(private http: HttpClient) { }
 
